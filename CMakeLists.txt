@@ -38,4 +38,5 @@ if("${CMAKE_BUILD_TYPE}"
   set(CMAKE_BUILD_TYPE "Debug")
 endif()
 
+add_subdirectory("external/glm")
 add_subdirectory("examples")
