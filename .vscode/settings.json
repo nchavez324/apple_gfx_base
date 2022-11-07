@@ -1,0 +1,50 @@
+{
+  "cmakeFormat.args": [
+    "--config-file",
+    "${workspaceFolder}/.cmake-format.py",
+  ],
+  "editor.defaultFormatter": "xaver.clang-format",
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.insertSpaces": true,
+  "editor.renderFinalNewline": true,
+  "editor.rulers": [
+    80,
+    100,
+  ],
+  "editor.tabSize": 2,
+  "files.associations": {
+    "*.c": "c",
+    "*.cc": "cpp",
+    "*.cmake": "cmake",
+    "*.cpp": "cpp",
+    "*.h": "objective-cpp",
+    "*.metal": "cpp",
+    "CMakeLists.txt": "cmake"
+  },
+  "files.exclude": {
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
+  "git.useEditorAsCommitInput": true,
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[cmake]": {
+    "editor.defaultFormatter": "cheshirekow.cmake-format"
+  },
+  "[objective-c]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[objective-cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "cmake.configureOnOpen": false
+}
