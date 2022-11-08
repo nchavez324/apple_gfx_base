@@ -7,5 +7,5 @@
     "test_app"
   ],
   "projectName" : "TestApp",
-  "workspaceRoot" : "../.."
+  "workspaceRoot" : "./"
 }

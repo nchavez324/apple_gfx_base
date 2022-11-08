@@ -35,15 +35,15 @@ I won't go into the nitty gritty because stuff changes all the time, but the gis
 1. Refer to it in a `(macos|ios|tvos)_application` rule via the `provisioning_profile` attribute.
 
 ## Run from Xcode
-Note that `profiles/ios.mobileprovision` is scoped to:
+Replace `profiles/ios.mobileprovision` with your own. Mine was scoped to (IDs and names scrubbed):
 
- - App ID: Team Wildcard: UA832M7LLD.*
- - Devices: Nick's iPhone 12 Mini (Crossbones)
+ - App ID: Team Wildcard: XYZ123ABCD.*
+ - Devices: Nick's iPhone
  - Platform: iOS
- - Certificate: Apple Development (expires 2023/01/21)
+ - Certificate: Apple Development (expires 2023/01/01)
 
 1. In Xcode go to TestApp > Targets > test_app(ios|tvos) > Signing & Capabilities
-1. Select 'Nicolas Chavez' team
+1. Select your team
 1. Ensure 'Automatically manage signing' is unchecked
 1. Select Provisioning Profile' 'Apple iOS Development (*)'
 1. Run on a device contained in the profile

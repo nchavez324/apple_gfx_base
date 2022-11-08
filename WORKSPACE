@@ -43,3 +43,19 @@ http_archive(
   url = "https://github.com/g-truc/glm/releases/download/0.9.9.8/glm-0.9.9.8.zip",
   sha256 = "37e2a3d62ea3322e43593c34bae29f57e3e251ea89f4067506c94043769ade4c",
 )
+
+http_archive(
+  name = "stb",
+  build_file = "@//third_party:stb.BUILD",
+  strip_prefix = "stb-af1a5bc352164740c1cc1354942b1c6b72eacb8a",
+  url = "https://github.com/nothings/stb/archive/af1a5bc352164740c1cc1354942b1c6b72eacb8a.zip",
+  sha256 = "e3d0edbecd356506d3d69b87419de2f9d180a98099134c6343177885f6c2cbef",
+)
+
+git_repository(
+  name = "entt",
+  remote = "https://github.com/skypjack/entt.git",
+  # tag = "v3.9.0",
+  commit = "8e0747fd505beb6861939a141ec0962c376d36f2",
+  shallow_since = "1640071968 +0100",
+)
