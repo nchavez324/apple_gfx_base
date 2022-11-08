@@ -1,4 +1,5 @@
 bazel-*
+*.mobileprovision
 
 # macOS
 .DS_Store

@@ -35,7 +35,7 @@ I won't go into the nitty gritty because stuff changes all the time, but the gis
 1. Refer to it in a `(macos|ios|tvos)_application` rule via the `provisioning_profile` attribute.
 
 ## Run from Xcode
-Note that `test_app/Apple_iOS_Development_.mobileprovision` is scoped to:
+Note that `profiles/ios.mobileprovision` is scoped to:
 
  - App ID: Team Wildcard: UA832M7LLD.*
  - Devices: Nick's iPhone 12 Mini (Crossbones)
