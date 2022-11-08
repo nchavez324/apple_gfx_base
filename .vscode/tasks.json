@@ -1,25 +1,164 @@
 {
-	"version": "2.0.0",
-	"tasks": [
+  "version": "2.0.0",
+  "tasks": [
     {
-      "type": "cmake",
-      "label": "CMake: configure",
-      "command": "configure",
-      "preset": "${command:cmake.activeConfigurePresetName}",
-      "problemMatcher": [],
-      "detail": "CMake template configure task"
+      "label": "BuildCCAppMacOS",
+      "type": "shell",
+      "command": "bazel",
+      "group": {
+        "isDefault": false,
+        "kind": "build"
+      },
+      "args": [
+        "build",
+        "//cc_app:cc_app_macos"
+      ]
     },
     {
-      "type": "cmake",
-      "label": "CMake: build",
-      "command": "build",
-      "preset": "${command:cmake.activeBuildPresetName}",
-      "group": "build",
-      "problemMatcher": [],
-      "detail": "CMake template build task",
-      "dependsOn": [
-        "CMake: configure"
+      "label": "BuildCCAppMacOSUnzipped",
+      "type": "shell",
+      "command": "bazel",
+      "group": {
+        "isDefault": false,
+        "kind": "build"
+      },
+      "args": [
+        "build",
+        "//cc_app:cc_app_macos_unzipped"
       ]
+    },
+    {
+      "label": "BuildCCAppIOS",
+      "type": "shell",
+      "command": "bazel",
+      "group": {
+        "isDefault": false,
+        "kind": "build"
+      },
+      "args": [
+        "build",
+        "//cc_app:cc_app_ios"
+      ]
+    },
+    {
+      "label": "BuildCCAppTvOS",
+      "type": "shell",
+      "command": "bazel",
+      "group": {
+        "isDefault": false,
+        "kind": "build"
+      },
+      "args": [
+        "build",
+        "//cc_app:cc_app_tvos"
+      ]
+    },
+    {
+      "label": "BuildSwiftAppMacOS",
+      "type": "shell",
+      "command": "bazel",
+      "group": {
+        "isDefault": true,
+        "kind": "build"
+      },
+      "args": [
+        "build",
+        "//swift_app:swift_app_macos"
+      ]
+    },
+    {
+      "label": "BuildSwiftAppMacOSUnzipped",
+      "type": "shell",
+      "command": "bazel",
+      "group": {
+        "isDefault": false,
+        "kind": "build"
+      },
+      "args": [
+        "build",
+        "//swift_app:swift_app_macos_unzipped"
+      ]
+    },
+    {
+      "label": "BuildSwiftAppIOS",
+      "type": "shell",
+      "command": "bazel",
+      "group": {
+        "isDefault": false,
+        "kind": "build"
+      },
+      "args": [
+        "build",
+        "//swift_app:swift_app_ios"
+      ],
+    },
+    {
+      "label": "BuildSDLAppMacOS",
+      "type": "shell",
+      "command": "bazel",
+      "group": {
+        "isDefault": false,
+        "kind": "build"
+      },
+      "args": [
+        "build",
+        "//sdl_app:app_macos"
+      ]
+    },
+    {
+      "label": "BuildSDLAppMacOSUnzipped",
+      "type": "shell",
+      "command": "bazel",
+      "group": {
+        "isDefault": false,
+        "kind": "build"
+      },
+      "args": [
+        "build",
+        "//sdl_app:app_macos_unzipped"
+      ]
+    },
+    {
+      "label": "BuildTestAppMacOS",
+      "type": "shell",
+      "command": "bazel",
+      "group": {
+        "isDefault": false,
+        "kind": "build"
+      },
+      "args": [
+        "build",
+        "//test_app:test_app_macos",
+        "--//config/graphics=metal"
+      ]
+    },
+    {
+      "label": "BuildTestAppMacOSUnzipped",
+      "type": "shell",
+      "command": "bazel",
+      "group": {
+        "isDefault": false,
+        "kind": "build"
+      },
+      "args": [
+        "build",
+        "//test_app:test_app_macos_unzipped",
+        "--//config/graphics=metal"
+      ]
+    },
+    {
+      "label": "BuildTestAppIOS",
+      "type": "shell",
+      "command": "bazel",
+      "group": {
+        "isDefault": false,
+        "kind": "build"
+      },
+      "args": [
+        "build",
+        "//test_app:test_app_ios",
+        "--//config/graphics=opengles"
+      ],
     }
   ]
 }

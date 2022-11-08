@@ -1,0 +1,54 @@
+{
+  "additionalFilePaths" : [
+    "test_app/BUILD"
+  ],
+  "buildTargets" : [
+    "//test_app:test_app_tvos",
+  ],
+  "optionSet" : {
+    "BazelBuildOptionsDebug" : {
+      "p" : "$(inherited) --//config/graphics=metal"
+    },
+    "BazelBuildOptionsRelease" : {
+      "p" : "$(inherited) --//config/graphics=metal"
+    },
+    "BazelBuildStartupOptionsDebug" : {
+      "p" : "$(inherited)"
+    },
+    "BazelBuildStartupOptionsRelease" : {
+      "p" : "$(inherited)"
+    },
+    "BuildActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "BuildActionPreActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "CommandlineArguments" : {
+      "p" : "$(inherited)"
+    },
+    "EnvironmentVariables" : {
+      "p" : "$(inherited)"
+    },
+    "LaunchActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "LaunchActionPreActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "ProjectGenerationPlatformConfiguration" : {
+      "p" : "tvos_x86_64"
+    },
+    "TestActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "TestActionPreActionScript" : {
+      "p" : "$(inherited)"
+    }
+  },
+  "projectName" : "TestApp",
+  "sourceFilters" : [
+    "test_app/...",
+    "third_party/apple_cpp/..."
+  ]
+}

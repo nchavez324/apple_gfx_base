@@ -1,0 +1,47 @@
+#ifndef TEST_APP_COMMON_PLATFORM_DEFINES_H
+#define TEST_APP_COMMON_PLATFORM_DEFINES_H
+
+#if defined(__APPLE__) && __APPLE__
+#include <TargetConditionals.h>
+
+#if TARGET_OS_OSX
+#define PLATFORM_APPLE 1
+#define PLATFORM_MACOS 1
+#define PLATFORM_APPKIT 1
+#define PLATFORM_UIKIT 0
+#define PLATFORM_IOS 0
+#define PLATFORM_TVOS 0
+#define PLATFORM_LINUX 0
+
+#elif TARGET_OS_IOS
+#define PLATFORM_APPLE 1
+#define PLATFORM_MACOS 0
+#define PLATFORM_APPKIT 0
+#define PLATFORM_UIKIT 1
+#define PLATFORM_IOS 1
+#define PLATFORM_TVOS 0
+#define PLATFORM_LINUX 0
+
+#elif TARGET_OS_TV
+#define PLATFORM_APPLE 1
+#define PLATFORM_MACOS 0
+#define PLATFORM_APPKIT 0
+#define PLATFORM_UIKIT 1
+#define PLATFORM_IOS 0
+#define PLATFORM_TVOS 1
+#define PLATFORM_LINUX 0
+
+#endif  // TARGET_OS_TV
+
+#elif defined(__linux__) && __linux__
+#define PLATFORM_APPLE 0
+#define PLATFORM_MACOS 0
+#define PLATFORM_APPKIT 0
+#define PLATFORM_UIKIT 0
+#define PLATFORM_IOS 0
+#define PLATFORM_TVOS 0
+#define PLATFORM_LINUX 1
+
+#endif  // __linux__
+
+#endif  // TEST_APP_COMMON_PLATFORM_DEFINES_H

@@ -1,7 +1,7 @@
 {
-  "cmakeFormat.args": [
-    "--config-file",
-    "${workspaceFolder}/.cmake-format.py",
+  "clangd.arguments": [
+    "--header-insertion=never",
+    "--compile-commands-dir=${workspaceFolder}/"
   ],
   "editor.defaultFormatter": "xaver.clang-format",
   "editor.detectIndentation": false,
@@ -17,18 +17,21 @@
   "files.associations": {
     "*.c": "c",
     "*.cc": "cpp",
-    "*.cmake": "cmake",
     "*.cpp": "cpp",
     "*.h": "objective-cpp",
     "*.metal": "cpp",
-    "CMakeLists.txt": "cmake"
+    "WORKSPACE": "starlark",
+    "BUILD": "starlark",
+    "*.bzl": "starlark",
+    "*.BUILD": "starlark"
   },
   "files.exclude": {
     "**/.svn": true,
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    "**/Thumbs.db": true
+    "**/Thumbs.db": true,
+    "bazel-*": true
   },
   "git.useEditorAsCommitInput": true,
   "[c]": {
@@ -37,14 +40,10 @@
   "[cpp]": {
     "editor.defaultFormatter": "xaver.clang-format"
   },
-  "[cmake]": {
-    "editor.defaultFormatter": "cheshirekow.cmake-format"
-  },
   "[objective-c]": {
     "editor.defaultFormatter": "xaver.clang-format"
   },
   "[objective-cpp]": {
     "editor.defaultFormatter": "xaver.clang-format"
-  },
-  "cmake.configureOnOpen": false
+  }
 }

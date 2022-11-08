@@ -1,0 +1,11 @@
+{
+  "configDefaults" : {
+    "optionSet" : {
+    }
+  },
+  "packages" : [
+    "test_app"
+  ],
+  "projectName" : "TestApp",
+  "workspaceRoot" : "../.."
+}

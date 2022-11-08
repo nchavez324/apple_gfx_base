@@ -1,5 +1,4 @@
 bazel-*
-build/
 
 # macOS
 .DS_Store
